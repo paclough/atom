@@ -1,6 +1,18 @@
 <section id="action-icons">
   <ul>
 
+    <?php
+      $mailto = ContactUsEmailAction::getContactUsEmail( $resource );
+    ?>
+    <?php if (!empty($mailto)): ?>
+    <li class="separator">
+      <a href="<?php echo $mailto?>">
+      <i class="fa fa-envelope"></i>
+      <?php echo __( 'Contact us about this collection' ) ?>
+      </a>
+    </li>
+    <?php endif; ?>
+
     <li class="separator"><h4><?php echo __('Clipboard'); ?></h4></li>
 
     <li class="clipboard">
