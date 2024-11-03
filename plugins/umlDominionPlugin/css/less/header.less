@@ -15,25 +15,18 @@
  * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
  */
 
-@topBarBackgroundColor: rgb(22, 21, 20);
+@topBarBackgroundColor: #4f5b65;
 @topBarButtonHoverColor: @orange;
 
 #top-bar {
   background-color: @topBarBackgroundColor;
-
-  // Hack to always wrap the header content
-  // without disrupting themes extending this one.
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+  height: 50px;
 }
 
 header #logo {
   display: block;
   float: left;
-  margin: 0 20px 0 8px;
+  margin: 4px 20px 0 8px;
 }
 
 #site-name {
@@ -81,7 +74,7 @@ button.top-dropdown:link,
 button.top-dropdown:visited,
 button.top-dropdown:active {
   padding: 5px 29px 6px 17px;
-  background-image: url(../../images/gray-arrow.png);
+  background-image: url(../images/gray-arrow.png);
   background-position: right center;
   background-repeat: no-repeat;
   color: lighten(@gray, 40%);
@@ -91,7 +84,7 @@ button.top-dropdown:active {
 button.top-dropdown:hover,
 button.top-dropdown:focus {
   background-color: @topBarButtonHoverColor !important;
-  background-image: url(../../images/white-arrow.png);
+  background-image: url(../images/white-arrow.png);
   color: @white;
 }
 
@@ -129,7 +122,7 @@ nav > div {
       height: 20px;
       position: absolute;
       right: 10px;
-      background-image: url('../../images/dropdown-arrow.png');
+      background-image: url('../images/dropdown-arrow.png');
       background-repeat: no-repeat;
       background-position: center -25px;
     }
