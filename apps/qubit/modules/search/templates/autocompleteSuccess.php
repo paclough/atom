@@ -1,3 +1,24 @@
+<?php if ($collections->getTotalHits() > 0) { ?>
+  <section>
+    <?php echo image_tag('/images/icons-small/icon-new-small.png', ['width' => '24', 'height' => '24', 'alt' => sfConfig::get('app_ui_label_informationobject')]); ?>
+    <ul>
+      <?php foreach ($collections->getResults() as $hit) { ?>
+        <?php $doc = $hit->getData(); ?>
+        <li>
+          <?php echo link_to(render_title(get_search_i18n($doc, 'title')), ['module' => 'informationobject', 'slug' => $doc['slug']]); ?>
+          <?php $lodId = $doc['levelOfDescriptionId']; ?>
+          <?php if (null !== $lodId) { ?>
+            <?php echo render_value_inline($levelsOfDescription[$lodId]); ?>
+          <?php } ?>
+        </li>
+      <?php } ?>
+      <?php if ($descriptions->getTotalHits() > 3) { ?>
+        <li class="showall"><?php echo link_to(__('all matching collections'), ['module' => 'informationobject', 'action' => 'browse', 'topLod' => '1'] + $sf_data->getRaw('allMatchingIoParams')); ?></li>
+      <?php } ?>
+    </ul>
+  </section>
+<?php } ?>
+
 <?php if ($descriptions->getTotalHits() > 0) { ?>
   <section>
     <?php echo image_tag('/images/icons-small/icon-archival-small.png', ['width' => '24', 'height' => '24', 'alt' => sfConfig::get('app_ui_label_informationobject')]); ?>

@@ -72,6 +72,12 @@ class SearchAutocompleteAction extends sfAction
                 'fields' => ['slug', sprintf('i18n.%s.name', $culture)],
                 'term_filter' => ['taxonomyId' => QubitTaxonomy::SUBJECT_ID],
             ],
+            [
+                'type' => 'QubitInformationObject',
+                'field' => sprintf('i18n.%s.title', $culture),
+                'fields' => ['slug', sprintf('i18n.%s.title', $culture), 'levelOfDescriptionId'],
+                'term_filter' => ['parentId' => 1]
+            ]
         ];
 
         foreach ($items as $item) {
@@ -119,6 +125,7 @@ class SearchAutocompleteAction extends sfAction
         $this->actors = $resultSets[2];
         $this->places = $resultSets[3];
         $this->subjects = $resultSets[4];
+        $this->collections = $resultSets[5];
 
         // Return a blank response if there are no results
         if (0 == $this->descriptions->getTotalHits() + $this->repositories->getTotalHits() + $this->actors->getTotalHits() + $this->places->getTotalHits() + $this->subjects->getTotalHits()) {
