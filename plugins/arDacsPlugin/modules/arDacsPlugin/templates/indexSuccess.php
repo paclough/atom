@@ -51,7 +51,7 @@
   <?php echo get_component('digitalobject', 'show', ['link' => $digitalObjectLink, 'resource' => $resource->digitalObjectsRelatedByobjectId[0], 'usageType' => QubitTerm::REFERENCE_ID]); ?>
 <?php } ?>
 
-<?php if (check_field_visibility('app_element_visibility_physical_storage')) { ?>
+<?php if (check_field_visibility('app_element_visibility_physical_storage') && $sf_user->isAuthenticated()) { ?>
   <?php echo get_component('physicalobject', 'contextMenu', ['resource' => $resource]); ?>
 <?php } ?>
 
