@@ -61,8 +61,6 @@
     <?php echo link_to_if(SecurityPrivileges::editCredentials($sf_user, 'informationObject'), '<h2>'.__('Identity elements').'</h2>', [$resource, 'module' => 'informationobject', 'action' => 'edit'], ['anchor' => 'identityArea', 'title' => __('Edit identity elements')]); ?>
   <?php } ?>
 
-  <?php echo render_show(__('Reference code'), $dacs->getProperty('referenceCode')); ?>
-
   <?php echo render_show_repository(__('Name and location of repository'), $resource); ?>
 
   <?php echo render_show(__('Level of description'), render_value($resource->levelOfDescription)); ?>
