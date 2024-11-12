@@ -180,7 +180,9 @@
             'tableView' => $tableView, 'module' => 'informationobject', ]); ?>
       </span>
 
+
       <div class="pickers">
+        <?php echo get_partial( 'default/showOnlyPicker', array()) ?>
         <?php echo get_partial('default/sortPickers', [
             'options' => [
                 'lastUpdated' => __('Date modified'),
