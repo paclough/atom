@@ -13,7 +13,7 @@
 <header id="top-bar">
 
   <?php if (sfConfig::get('app_toggleLogo')) { ?>
-    <?php echo link_to(image_tag('logo', ['alt' => 'AtoM']), '@homepage', ['id' => 'logo', 'rel' => 'home']); ?>
+    <?php echo link_to(image_tag('uml-logo_vision2', ['alt' => 'AtoM']), '@homepage', ['id' => 'logo', 'rel' => 'home']); ?>
   <?php } ?>
 
   <?php if (sfConfig::get('app_toggleTitle')) { ?>
