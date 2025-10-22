@@ -6,7 +6,7 @@
 
 <?php slot('title'); ?>
 
-  <h1><?php echo render_title($dacs); ?></h1>
+<h1><?php echo render_title($dacs); ?> (<?php echo render_title($dacs->getProperty('referenceCode')); ?>)</h1>
 
   <?php if (isset($errorSchema)) { ?>
     <div class="messages error">
