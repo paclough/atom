@@ -13,6 +13,7 @@
     </li>
     <?php endif; ?>
 
+    <div id="request-material">
     <?php
       $collectionIdentifier = $resource->getCollectionRoot()->identifier;
       $repositoryCode = substr( $collectionIdentifier, 0, 3 );
@@ -30,6 +31,7 @@
             <?php echo $request_link ?>
         </li>
     <?php endif; ?>
+    </div>
 
     <li class="separator"><h4><?php echo __('Clipboard'); ?></h4></li>
 
