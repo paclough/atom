@@ -13,6 +13,24 @@
     </li>
     <?php endif; ?>
 
+    <?php
+      $collectionIdentifier = $resource->getCollectionRoot()->identifier;
+      $repositoryCode = substr( $collectionIdentifier, 0, 3 );
+
+      if (( $repositoryCode != 'ASM' ||
+            $resource != $resource->getCollectionRoot() &&
+            count( $resource->getPhysicalObjects() ))): ?>
+
+        <li class="separator"><h4><?php echo "Request material" ?></h4></li>
+        <?php
+            $request_link = RequestMaterialAction::getRequestLink( $resource );
+        ?>
+        <li class="request-material">
+          <i class="fa fa-cube"></i>
+            <?php echo $request_link ?>
+        </li>
+    <?php endif; ?>
+
     <li class="separator"><h4><?php echo __('Clipboard'); ?></h4></li>
 
     <li class="clipboard">
