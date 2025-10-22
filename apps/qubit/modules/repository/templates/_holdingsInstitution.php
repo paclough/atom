@@ -26,6 +26,7 @@
 
       <form class="sidebar-search" role="search" aria-label="<?php echo __(sfConfig::get('app_ui_label_institutionSearchHoldings')); ?>" action="<?php echo url_for(['module' => 'informationobject', 'action' => 'browse']); ?>">
         <input type="hidden" name="repos" value="<?php echo $resource->id; ?>">
+        <input type="hidden" name="topLod" value="0" />
         <div class="input-prepend input-append">
           <input type="text" name="query" aria-label="<?php echo __('Search'); ?>" value="<?php echo $sf_request->query; ?>" placeholder="<?php echo __('Search'); ?>">
           <button class="btn" type="submit" aria-label="<?php echo __('Search'); ?>">
