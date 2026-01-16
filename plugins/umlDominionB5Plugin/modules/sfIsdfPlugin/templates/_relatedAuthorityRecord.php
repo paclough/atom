@@ -15,7 +15,7 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-	<tr>
+        <tr>
           <th class="w-30">
             <?php echo __('Identifier/name'); ?>
           </th>

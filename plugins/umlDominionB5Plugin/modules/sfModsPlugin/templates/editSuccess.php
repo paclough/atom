@@ -73,7 +73,7 @@
             <div class="table-responsive mb-2">
               <table class="table table-bordered mb-0 multi-row">
                 <thead class="table-light">
-		  <tr>
+                  <tr>
                     <th id="child-identifier-head" class="w-20">
                       <?php echo __('Identifier'); ?>
                     </th>
