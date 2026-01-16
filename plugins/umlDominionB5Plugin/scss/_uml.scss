@@ -1,10 +1,12 @@
 // University of Miami Libraries Customization
 //
 
+$uml-accent: #f17430;
+
 #hometiles h2 {
   font-size: 14.3px;
   line-height: 1.5em;
-  color: #f17430;
+  color: $uml-accent;
   padding: 10px;
   border-top: 0px;
   border-bottom: 8px solid #555;
@@ -39,7 +41,7 @@
 }
 
 .request-material {
-  background-color: #f17430;
+  background-color: $uml-accent;
   padding: 4px 10px 6px 10px;
   border-radius: 4px;
   display: inline-block;
@@ -64,7 +66,7 @@
   &:hover,
   &:active {
     transition: all 0.35s ease-in-out;
-    background-color: darken(#f17430, 10);
+    background-color: darken($uml-accent, 10);
   }
 }
 
@@ -164,7 +166,7 @@ footer {
         content: "\f101";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        color: #f17430;
+        color: $uml-accent;
         padding: 0 1px 0 6px;
       }
     }
@@ -179,7 +181,7 @@ footer {
       content: "\f101";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
-      color: #f17430;
+      color: $uml-accent;
       padding: 0 1px 0 6px;
       margin-right: 2px;
     }
