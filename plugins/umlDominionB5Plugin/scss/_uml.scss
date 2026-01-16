@@ -146,12 +146,6 @@ header#top-bar {
       height: 40px;
     }
   }
-
-  // Fallback selector in case #logo wrapper is not present
-  .navbar-brand img {
-    width: 248px;
-    height: 40px;
-  }
 }
 
 .search-result .result-details .breadcrumb {
