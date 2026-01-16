@@ -19,7 +19,7 @@
     <?php if (sfConfig::get('app_toggleLogo') || sfConfig::get('app_toggleTitle')) { ?>
       <a id="logo" class="navbar-brand d-flex flex-wrap flex-lg-nowrap align-items-center py-0 me-0" href="<?php echo url_for('@homepage'); ?>" title="<?php echo __('Home'); ?>" rel="home">
         <?php if (sfConfig::get('app_toggleLogo')) { ?>
-          <?php echo image_tag('uml-logo_vision2', ['alt' => __('AtoM'), 'class' => 'd-inline-block my-2 me-3', 'height' => '40']); ?>
+          <?php echo image_tag('uml-logo_vision2', ['alt' => __('University of Miami Libraries'), 'class' => 'd-inline-block my-2 me-3', 'height' => '40']); ?>
         <?php } ?>
         <?php if (sfConfig::get('app_toggleTitle') && !empty(sfConfig::get('app_siteTitle'))) { ?>
           <span class="text-wrap my-1 me-3"><?php echo esc_specialchars(sfConfig::get('app_siteTitle')); ?></span>
